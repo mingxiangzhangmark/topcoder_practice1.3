@@ -6,6 +6,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         about: 'src/about.html',
+        img:'public/img/cartoon_image_man.png'
       },
     },
   },
