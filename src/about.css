@@ -1,52 +1,47 @@
+/* General styles */
 body {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .mySpan {
-  /* 外间距 */
-  /* margin: 5px 0; */
-  /* 内间距 */
   padding: 5px 10px;
-  /* 字体颜色 */
   color: #fff;
-  /* 背景颜色 */
   background-color: #1379c2;
-  /* 圆角处理 */
   border-radius: 5px;
-  /* 鼠标手样式 */
   cursor: pointer;
-
 }
 
 img {
   display: inline;
-  width: 300px;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 150px;
   box-shadow: 0px 0px 5px;
 }
 
 p {
   max-width: 600px;
   text-align: justify;
+  margin: 20px;
 }
 
 header {
   display: flex;
-  gap: 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
 }
 
 ul {
-  /* list-style: none; */
-  /* list-style-type: square; */
   list-style-image: url("/img/1.svg");
-}
-
-ol {
-  list-style-image: url("/img/1.svg");
+  padding: 0;
 }
 
 li {
@@ -54,26 +49,28 @@ li {
   padding: 10px;
 }
 
-
 .background {
   position: fixed;
   z-index: -1;
   top: 0;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(to right bottom, white, #b5f5ec 100%);
+  background: linear-gradient(to right bottom, white, #b5dff5 100%);
 }
 
 table {
-  width: 650px;
+  width: 90%;
+  max-width: 650px;
   border: 1px solid;
   border-collapse: collapse;
+  margin: 20px auto;
 }
 
 th,
 td {
   border: 1px solid;
   text-align: center;
+  padding: 10px;
 }
 
 .table-blue {
@@ -82,4 +79,131 @@ td {
 
 thead th {
   text-transform: uppercase;
+}
+
+.imagedownload{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 650px;
+  height: 10px;
+  background-color: #1379c2;
+  margin-bottom: 10px;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  line-height: 10px;
+}
+
+/* Media queries for responsiveness */
+
+/* Mobile: Up to 480px */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  p {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 5px;
+  }
+
+  header {
+    gap: 10px;
+  }
+}
+
+/* Tablet: 481px to 786px */
+@media screen and (min-width: 481px) and (max-width: 786px) {
+  body {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  p {
+    max-width: 80%;
+    font-size: 16px;
+  }
+
+  ul li {
+    font-size: 16px;
+    margin: 10px;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  table {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  header {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+/* Desktop: 787px and up */
+@media screen and (min-width: 787px) {
+  body {
+    padding: 30px;
+    font-size: 18px;
+  }
+
+  p {
+    max-width: 60%;
+    font-size: 18px;
+  }
+
+  ul li {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  table {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: row;
+    gap: 50px;
+  }
 }
